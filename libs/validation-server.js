@@ -13,12 +13,15 @@ var querystring = require('querystring');
 var crypto = require('crypto');
 
 
+/**
+ * 微信接入身份验证
+ * @param httpPort 端口，必须是 80
+ * @param token 本地设置的 token，需要与网页上设置的“接口配置信息”的 Token 保持一致
+ */
 function serveValidationServer(httpPort, token) {
 
   var serve = function() {
-    var validationHttpServer = http
-        .createServer(wechatReceiver)
-        .listen(httpPort);
+    http.createServer(wechatReceiver).listen(httpPort);
   };
 
   function wechatReceiver(request, response) {

@@ -10,6 +10,7 @@
 // custom modules
 var validationServer = require('./libs/validation-server');
 var accessTokenMgr = require('./libs/access-token');
+var alertServer = require('./libs/alert-server');
 
 // configs
 var config = require('./conf/config');
@@ -25,4 +26,9 @@ var accessToken = '';
 
 accessTokenMgr.AccessToken(ACCESS_TOKEN_URI, function(newAccessToken) {
     accessToken = newAccessToken;
+});
+
+// 接收消息
+alertServer.serve(config.clientPort, config.clientToken, function(message) {
+    console.log(message);
 });
