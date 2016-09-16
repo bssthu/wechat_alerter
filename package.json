@@ -1,0 +1,27 @@
+{
+  "name": "wechat_alerter",
+  "description": "向关注服务号的特定用户转发模板消息.",
+  "keywords": [
+    "wechat"
+  ],
+  "homepage": "https://github.com/bssthu/wechat_alerter",
+  "version": "0.1.0",
+  "author": {
+    "name": "bssthu"
+  },
+  "engines": {
+    "node": "4.2.2"
+  },
+  "main": "./server",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bssthu/wechat_alerter.git"
+  },
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bssthu/wechat_alerter/issues"
+  }
+}
