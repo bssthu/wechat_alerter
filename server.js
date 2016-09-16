@@ -11,6 +11,7 @@
 var validationServer = require('./libs/validation-server');
 var accessTokenMgr = require('./libs/access-token');
 var alertServer = require('./libs/alert-server');
+var templateMessageMgr = require('./libs/template-message');
 
 // configs
 var config = require('./conf/config');
@@ -30,5 +31,8 @@ accessTokenMgr.AccessToken(ACCESS_TOKEN_URI, function(newAccessToken) {
 
 // 接收消息
 alertServer.serve(config.clientPort, config.clientToken, function(message) {
+    config.users.forEach(function(user) {
+        templateMessageMgr.sendTemplateMessage(message, accessToken, config.templateId, user);
+    });
     console.log(message);
 });
