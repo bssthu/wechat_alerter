@@ -1,0 +1,21 @@
+// copy to ../conf, then change the name of this file to 'config.js'
+module.exports = {
+  'httpPort': 80,
+  'token': 'mytoken',           // 公众号的令牌
+  'encodingAesKey': 'mykey',    // 公众号的消息加解密密钥
+
+  // 测试号/服务号的信息
+  'appId': '000000000000000000',
+  'appsecret': '00000000000000000000000000000000',
+
+  // 模板ID
+  'templateId': '0000000000000000000000000000000000000000000',
+  // 转发的用户列表
+  'users': [
+      '0000000000000000000000000000'
+  ],
+
+  // 消息接收相关设置
+  'clientPort': 12300,
+  'clientToken': 'myclienttoken'
+};
