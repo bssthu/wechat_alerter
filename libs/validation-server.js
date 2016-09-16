@@ -3,18 +3,17 @@
 // File          : validation-server.js
 // Author        : bss
 // Project       : wechat_alerter
-// Description   :
+// Description   : 微信接入身份验证
 // 
 
 
 var http = require('http');
-var https = require('https');
 var url = require('url');
 var querystring = require('querystring');
 var crypto = require('crypto');
 
 
-function ServeValidationServer(httpPort, token) {
+function serveValidationServer(httpPort, token) {
 
   var serve = function() {
     var validationHttpServer = http
@@ -44,4 +43,4 @@ function ServeValidationServer(httpPort, token) {
 }
 
 
-exports.serve = ServeValidationServer;
+exports.serve = serveValidationServer;

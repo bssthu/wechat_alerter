@@ -20,6 +20,9 @@
     "type": "git",
     "url": "git+https://github.com/bssthu/wechat_alerter.git"
   },
+  "dependencies": {
+    "request": "~2.74.0"
+  },
   "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/bssthu/wechat_alerter/issues"
